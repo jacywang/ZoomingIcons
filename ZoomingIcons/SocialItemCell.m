@@ -7,6 +7,7 @@
 //
 
 #import "SocialItemCell.h"
+#import "SocialItem.h"
 
 @interface SocialItemCell ()
 
@@ -24,7 +25,12 @@
     self.cellViewColor.frame = self.bounds;;
     self.cellViewColor.layer.masksToBounds = YES;
     self.cellViewColor.layer.cornerRadius = self.bounds.size.width / 2;
-    self.cellViewColor.backgroundColor = [UIColor redColor];
+}
+
+-(void)configure:(SocialItem *)item {
+    self.cellImageView.image = item.itemImage;
+    self.cellImageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.cellViewColor.backgroundColor = item.itemColor;
 }
 
 @end

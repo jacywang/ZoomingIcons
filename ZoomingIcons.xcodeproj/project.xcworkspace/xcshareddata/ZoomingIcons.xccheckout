@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2F6087EF-6709-43C5-9E8A-C11098981458</string>
+	<key>IDESourceControlProjectName</key>
+	<string>project</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C02C85165073781F9FA1538BD9D1B95176DC6561</key>
+		<string>github.com:jacywang/ZoomingIcons.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ZoomingIcons.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C02C85165073781F9FA1538BD9D1B95176DC6561</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:jacywang/ZoomingIcons.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C02C85165073781F9FA1538BD9D1B95176DC6561</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C02C85165073781F9FA1538BD9D1B95176DC6561</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ZoomingIcons</string>
+		</dict>
+	</array>
+</dict>
+</plist>

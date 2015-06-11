@@ -30,15 +30,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T60-8e-kTX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <rect key="frame" x="20" y="20" width="60" height="60"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="T60-8e-kTX" secondAttribute="trailing" id="1KT-Ny-5AB"/>
-                                                <constraint firstItem="T60-8e-kTX" firstAttribute="top" secondItem="Ihv-9o-CNQ" secondAttribute="top" id="4vk-Pv-yy7"/>
-                                                <constraint firstItem="T60-8e-kTX" firstAttribute="leading" secondItem="Ihv-9o-CNQ" secondAttribute="leading" id="DlM-rh-Ho3"/>
-                                                <constraint firstAttribute="bottom" secondItem="T60-8e-kTX" secondAttribute="bottom" id="YVn-UL-21s"/>
+                                                <constraint firstAttribute="trailing" secondItem="T60-8e-kTX" secondAttribute="trailing" constant="20" id="1KT-Ny-5AB"/>
+                                                <constraint firstItem="T60-8e-kTX" firstAttribute="top" secondItem="Ihv-9o-CNQ" secondAttribute="top" constant="20" id="4vk-Pv-yy7"/>
+                                                <constraint firstItem="T60-8e-kTX" firstAttribute="leading" secondItem="Ihv-9o-CNQ" secondAttribute="leading" constant="20" id="DlM-rh-Ho3"/>
+                                                <constraint firstAttribute="bottom" secondItem="T60-8e-kTX" secondAttribute="bottom" constant="20" id="YVn-UL-21s"/>
                                             </constraints>
                                         </view>
                                     </subviews>

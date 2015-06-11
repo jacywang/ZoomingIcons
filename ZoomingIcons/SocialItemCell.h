@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class SocialItem;
 
 @interface SocialItemCell : UICollectionViewCell
+
+-(void)configure:(SocialItem *)item;
 
 @end

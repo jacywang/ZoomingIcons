@@ -8,11 +8,14 @@
 
 #import "MenuViewController.h"
 #import "SocialItemCell.h"
+#import "SocialItem.h"
 
 static const float CELL_WIDTH = 100.0;
 static const float ITEM_SPACING = 20;
 
 @interface MenuViewController () <UICollectionViewDelegateFlowLayout>
+
+@property (nonatomic) NSArray *itemArray;
 
 @end
 
@@ -26,6 +29,7 @@ static const float ITEM_SPACING = 20;
     
     // Do any additional setup after loading the view.
     self.collectionView.contentInset = UIEdgeInsetsMake(150, 0, 0, 0);
+    self.itemArray = [NSArray arrayWithArray:[self setupItemArray]];
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -51,6 +55,12 @@ static const float ITEM_SPACING = 20;
     SocialItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell
+    if (indexPath.section == 0) {
+        [cell configure:self.itemArray[indexPath.row]];
+    } else {
+        [cell configure:self.itemArray[indexPath.row + indexPath.section + 1]];
+    }
+    
     
     return cell;
 }
@@ -99,5 +109,17 @@ static const float ITEM_SPACING = 20;
 	
 }
 */
+
+#pragma mark - Help Method
+
+-(NSArray *)setupItemArray {
+    return @[
+             [[SocialItem alloc] initWithImageName:@"icon-twitter" andColor:[UIColor colorWithRed:0.255 green:0.557 blue:0.910 alpha:1] andName:@"Twitter" andSummary:@"Twitter is an online social networking service that enables users to send and read short 140-character messages called \"tweets\"."],
+             [[SocialItem alloc] initWithImageName:@"icon-facebook" andColor:[UIColor colorWithRed:0.239 green:0.239 blue:0.239 alpha:1] andName:@"Facebook" andSummary:@"Facebook (formerly thefacebook) is an online social networking service headquartered in Menlo Park, California. Its name comes from a colloquialism for the directory given to students at some American universities."],
+             [[SocialItem alloc] initWithImageName:@"icon-youtube" andColor:[UIColor colorWithRed:0.729 green:0.188 blue:0.188 alpha:1] andName:@"Youtube" andSummary:@"YouTube is a video-sharing website headquartered in San Bruno, California. The service was created by three former PayPal employees in February 2005 and has been owned by Google since late 2006. The site allows users to upload, view, and share videos."],
+             [[SocialItem alloc] initWithImageName:@"icon-vimeo" andColor:[UIColor colorWithRed:0.329 green:0.737 blue:0.988 alpha:1] andName:@"Vimeo" andSummary:@"Vimeo is a U.S.-based video-sharing website on which users can upload, share and view videos. Vimeo was founded in November 2004 by Jake Lodwick and Zach Klein."],
+             [[SocialItem alloc] initWithImageName:@"icon-instagram" andColor:[UIColor colorWithRed:0.325 green:0.498 blue:0.635 alpha:1] andName:@"Instagram" andSummary:@"Instagram is an online mobile photo-sharing, video-sharing and social networking service that enables its users to take pictures and videos, and share them on a variety of social networking platforms, such as Facebook, Twitter, Tumblr and Flickr."]
+             ];
+}
 
 @end

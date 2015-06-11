@@ -15,6 +15,7 @@
 		9C62F07E1B29E756006FD3A8 /* ZoomingIconsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C62F07D1B29E756006FD3A8 /* ZoomingIconsTests.m */; };
 		9C62F0891B29E8C6006FD3A8 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C62F0881B29E8C6006FD3A8 /* MenuViewController.m */; };
 		9C62F08C1B2A02AD006FD3A8 /* SocialItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C62F08B1B2A02AD006FD3A8 /* SocialItemCell.m */; };
+		9C62F08F1B2A08E6006FD3A8 /* SocialItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C62F08E1B2A08E6006FD3A8 /* SocialItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		9C62F0881B29E8C6006FD3A8 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		9C62F08A1B2A02AD006FD3A8 /* SocialItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialItemCell.h; sourceTree = "<group>"; };
 		9C62F08B1B2A02AD006FD3A8 /* SocialItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialItemCell.m; sourceTree = "<group>"; };
+		9C62F08D1B2A08E6006FD3A8 /* SocialItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialItem.h; sourceTree = "<group>"; };
+		9C62F08E1B2A08E6006FD3A8 /* SocialItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				9C62F0881B29E8C6006FD3A8 /* MenuViewController.m */,
 				9C62F08A1B2A02AD006FD3A8 /* SocialItemCell.h */,
 				9C62F08B1B2A02AD006FD3A8 /* SocialItemCell.m */,
+				9C62F08D1B2A08E6006FD3A8 /* SocialItem.h */,
+				9C62F08E1B2A08E6006FD3A8 /* SocialItem.m */,
 				9C62F06B1B29E756006FD3A8 /* Main.storyboard */,
 				9C62F06E1B29E756006FD3A8 /* Images.xcassets */,
 				9C62F0701B29E756006FD3A8 /* LaunchScreen.xib */,
@@ -225,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C62F0671B29E756006FD3A8 /* AppDelegate.m in Sources */,
+				9C62F08F1B2A08E6006FD3A8 /* SocialItem.m in Sources */,
 				9C62F08C1B2A02AD006FD3A8 /* SocialItemCell.m in Sources */,
 				9C62F0891B29E8C6006FD3A8 /* MenuViewController.m in Sources */,
 				9C62F0641B29E756006FD3A8 /* main.m in Sources */,
