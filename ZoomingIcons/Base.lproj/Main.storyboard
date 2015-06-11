@@ -19,14 +19,41 @@
                             <inset key="sectionInset" minX="0.0" minY="20" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="5Fb-aE-5PA">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="5Fb-aE-5PA" customClass="SocialItemCell">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ihv-9o-CNQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T60-8e-kTX">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="T60-8e-kTX" secondAttribute="trailing" id="1KT-Ny-5AB"/>
+                                                <constraint firstItem="T60-8e-kTX" firstAttribute="top" secondItem="Ihv-9o-CNQ" secondAttribute="top" id="4vk-Pv-yy7"/>
+                                                <constraint firstItem="T60-8e-kTX" firstAttribute="leading" secondItem="Ihv-9o-CNQ" secondAttribute="leading" id="DlM-rh-Ho3"/>
+                                                <constraint firstAttribute="bottom" secondItem="T60-8e-kTX" secondAttribute="bottom" id="YVn-UL-21s"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="Ihv-9o-CNQ" firstAttribute="leading" secondItem="5Fb-aE-5PA" secondAttribute="leading" id="JzL-pr-u9i"/>
+                                    <constraint firstItem="Ihv-9o-CNQ" firstAttribute="top" secondItem="5Fb-aE-5PA" secondAttribute="top" id="UZD-S1-KFq"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ihv-9o-CNQ" secondAttribute="trailing" id="tOD-NJ-nOs"/>
+                                    <constraint firstAttribute="bottom" secondItem="Ihv-9o-CNQ" secondAttribute="bottom" id="yrF-tG-afc"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="cellImageView" destination="T60-8e-kTX" id="KDe-6H-zj1"/>
+                                    <outlet property="cellViewColor" destination="Ihv-9o-CNQ" id="WNt-76-JdF"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

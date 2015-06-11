@@ -7,8 +7,9 @@
 //
 
 #import "MenuViewController.h"
+#import "SocialItemCell.h"
 
-static const float CELL_WIDTH = 80.0;
+static const float CELL_WIDTH = 100.0;
 static const float ITEM_SPACING = 20;
 
 @interface MenuViewController () <UICollectionViewDelegateFlowLayout>
@@ -47,10 +48,9 @@ static const float ITEM_SPACING = 20;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
+    SocialItemCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell
-    cell.backgroundColor = [UIColor redColor];
     
     return cell;
 }
@@ -58,7 +58,7 @@ static const float ITEM_SPACING = 20;
 #pragma mark <UICollectionViewDelegate>
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     NSInteger numberOfItems = [collectionView numberOfItemsInSection:section];
-    
+
     CGFloat edgeInset = (self.collectionView.bounds.size.width - numberOfItems * CELL_WIDTH - (numberOfItems - 1) * ITEM_SPACING) / 2;
     
     return UIEdgeInsetsMake(ITEM_SPACING, edgeInset, ITEM_SPACING, edgeInset);
