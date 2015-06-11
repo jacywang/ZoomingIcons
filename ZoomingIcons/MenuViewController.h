@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MenuViewController.h
 //  ZoomingIcons
 //
 //  Created by JIAN WANG on 6/11/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MenuViewController : UICollectionViewController
 
 @end
-
