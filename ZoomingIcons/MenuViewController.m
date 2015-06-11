@@ -8,13 +8,14 @@
 
 #import "MenuViewController.h"
 
-@interface MenuViewController ()
+static const float CELL_WIDTH = 80.0;
+static const float ITEM_SPACING = 20;
+
+@interface MenuViewController () <UICollectionViewDelegateFlowLayout>
 
 @end
 
 @implementation MenuViewController
-
-static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,46 +23,50 @@ static NSString * const reuseIdentifier = @"Cell";
     // Uncomment the following line to preserve selection between presentations
     // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
     // Do any additional setup after loading the view.
+    self.collectionView.contentInset = UIEdgeInsetsMake(150, 0, 0, 0);
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-#warning Incomplete method implementation -- Return the number of sections
-    return 0;
+    return 2;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-#warning Incomplete method implementation -- Return the number of items in the section
+    switch (section) {
+        case 0:
+            return 2;
+            break;
+        case 1:
+            return 3;
+            break;
+    }
     return 0;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
     // Configure the cell
+    cell.backgroundColor = [UIColor redColor];
     
     return cell;
+}
+
+#pragma mark <UICollectionViewDelegate>
+-(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+    NSInteger numberOfItems = [collectionView numberOfItemsInSection:section];
+    
+    CGFloat edgeInset = (self.collectionView.bounds.size.width - numberOfItems * CELL_WIDTH - (numberOfItems - 1) * ITEM_SPACING) / 2;
+    
+    return UIEdgeInsetsMake(ITEM_SPACING, edgeInset, ITEM_SPACING, edgeInset);
+    
+}
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(CELL_WIDTH, CELL_WIDTH);
 }
 
 #pragma mark <UICollectionViewDelegate>
