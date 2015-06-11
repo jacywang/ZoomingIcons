@@ -9,6 +9,7 @@
 #import "MenuViewController.h"
 #import "SocialItemCell.h"
 #import "SocialItem.h"
+#import "DetailedViewController.h"
 
 static const float CELL_WIDTH = 100.0;
 static const float ITEM_SPACING = 20;
@@ -61,7 +62,6 @@ static const float ITEM_SPACING = 20;
         [cell configure:self.itemArray[indexPath.row + indexPath.section + 1]];
     }
     
-    
     return cell;
 }
 
@@ -81,34 +81,18 @@ static const float ITEM_SPACING = 20;
 
 #pragma mark <UICollectionViewDelegate>
 
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    DetailedViewController *detailViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"DetailedViewController"];
+    
+    if (indexPath.section == 0) {
+        detailViewController.item = self.itemArray[indexPath.row];
+    } else {
+        detailViewController.item = self.itemArray[indexPath.row + indexPath.section + 1];
+    }
+    
+    [self presentViewController:detailViewController animated:YES completion:nil];
 }
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 #pragma mark - Help Method
 
