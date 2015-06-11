@@ -17,6 +17,7 @@
 		9C62F08F1B2A08E6006FD3A8 /* SocialItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C62F08E1B2A08E6006FD3A8 /* SocialItem.m */; };
 		9C62F0921B2A1AC7006FD3A8 /* DetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C62F0911B2A1AC7006FD3A8 /* DetailedViewController.m */; };
 		9C62F0941B2A1CBE006FD3A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C62F0931B2A1CBE006FD3A8 /* Main.storyboard */; };
+		9C62F0971B2A36C0006FD3A8 /* ZoomingIconTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C62F0961B2A36C0006FD3A8 /* ZoomingIconTransition.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		9C62F0901B2A1AC7006FD3A8 /* DetailedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailedViewController.h; sourceTree = "<group>"; };
 		9C62F0911B2A1AC7006FD3A8 /* DetailedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedViewController.m; sourceTree = "<group>"; };
 		9C62F0931B2A1CBE006FD3A8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9C62F0951B2A36C0006FD3A8 /* ZoomingIconTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoomingIconTransition.h; sourceTree = "<group>"; };
+		9C62F0961B2A36C0006FD3A8 /* ZoomingIconTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoomingIconTransition.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 				9C62F0911B2A1AC7006FD3A8 /* DetailedViewController.m */,
 				9C62F08D1B2A08E6006FD3A8 /* SocialItem.h */,
 				9C62F08E1B2A08E6006FD3A8 /* SocialItem.m */,
+				9C62F0951B2A36C0006FD3A8 /* ZoomingIconTransition.h */,
+				9C62F0961B2A36C0006FD3A8 /* ZoomingIconTransition.m */,
 				9C62F0931B2A1CBE006FD3A8 /* Main.storyboard */,
 				9C62F06E1B29E756006FD3A8 /* Images.xcassets */,
 				9C62F0701B29E756006FD3A8 /* LaunchScreen.xib */,
@@ -239,6 +244,7 @@
 				9C62F08C1B2A02AD006FD3A8 /* SocialItemCell.m in Sources */,
 				9C62F0891B29E8C6006FD3A8 /* MenuViewController.m in Sources */,
 				9C62F0921B2A1AC7006FD3A8 /* DetailedViewController.m in Sources */,
+				9C62F0971B2A36C0006FD3A8 /* ZoomingIconTransition.m in Sources */,
 				9C62F0641B29E756006FD3A8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -59,7 +59,7 @@ static const float ITEM_SPACING = 20;
     if (indexPath.section == 0) {
         [cell configure:self.itemArray[indexPath.row]];
     } else {
-        [cell configure:self.itemArray[indexPath.row + indexPath.section + 1]];
+        [cell configure:self.itemArray[indexPath.row + 2]];
     }
     
     return cell;
@@ -88,10 +88,10 @@ static const float ITEM_SPACING = 20;
     if (indexPath.section == 0) {
         detailViewController.item = self.itemArray[indexPath.row];
     } else {
-        detailViewController.item = self.itemArray[indexPath.row + indexPath.section + 1];
+        detailViewController.item = self.itemArray[indexPath.row + 2];
     }
     
-    [self presentViewController:detailViewController animated:YES completion:nil];
+    [self.navigationController pushViewController:detailViewController animated:YES];
 }
 
 #pragma mark - Help Method
